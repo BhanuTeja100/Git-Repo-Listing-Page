@@ -3,7 +3,7 @@ class Github {
     constructor() {
         this.url = "https://api.github.com/users/";
         this.repoUrl = "https://api.github.com/repos/";
-        this.accessToken = "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"
+        this.accessToken = "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"
     }
 
     async getGithubData(username, perPage = 10, page = 1) {
