@@ -1,0 +1,229 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+
+#logo{
+    border-radius: 50%;
+    max-width: 100px;
+}
+
+.logo {
+    float: left; /* Float the logo to the left */
+}
+
+#user-profile {
+    display: inline-block; /* Display the user profile section as inline-block */
+}
+#user-avatar {
+    border-radius: 50%;
+    max-width: 100px;
+}
+
+#user-details {
+    margin-left: 20px;
+}
+
+
+/* Style for input */
+#username {
+    padding: 5px;
+    font-size: 15px;
+    outline: none;
+    border: none;   
+    border-bottom: 1px solid #0b0b0b;
+    margin-bottom: 10px;
+    width: 200px; /* Adjust the width as needed */
+}
+
+/* Style for "Get Repositories" button */
+#get-repositories-button {
+    display: block;
+    margin: auto;
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-bottom: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Add hover effect */
+#get-repositories-button:hover {
+    background-color: #2577ae;
+}
+
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.loader {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin: 20px auto;
+    display: none;
+    animation: spin 1s linear infinite;
+}
+
+.repositories {
+    margin-top: 20px;
+}
+
+.pagination {
+    margin-top: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #a59f9f;
+    color: #fff;
+    background-image: url("./assets/header_background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+header {
+    background-image: url("./assets/header_background.jpg");
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #0e0e0e;
+    /* margin: 20px; */
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+#user-avatar {
+    border-radius: 50%;
+    max-width: 100px; /* Set a maximum width for the avatar */
+}
+
+
+
+#location-container {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center horizontally */
+}
+
+#locator-symbol {
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+
+#github-profile-link {
+      position: absolute; /* Position relative to the header */
+    bottom: 10px; /* Adjust the bottom distance as needed */
+    left: 10px; /* Adjust the left distance as needed */
+    text-decoration: underline;
+    color: #0e0e0e;
+}
+
+.repo-card {
+    border: 2px solid #0b0b0b;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 20px;
+    box-sizing: border-box;
+    width: calc(50% - 40px); /* 50% width with 40px space between cards */
+    display: inline-block;
+    vertical-align: top;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.repo-card:hover {
+    transform: scale(1.05);
+}
+
+h2 {
+    color: #3498db; /* Blue color */
+    margin: 0;
+    font-size: 1.5em;
+}
+
+p {
+    color: #555;
+}
+
+.topics-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.topic-box {
+    background-color: #4db6c0;
+    color: #fff;
+    padding: 8px 15px;
+    margin: 5px;
+    border-radius: 5px;
+    font-size: 0.8em;
+}
+
+
+.pagination {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.pagination button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 0px;
+    padding: 8px 12px;
+    margin: 0 2px;
+    cursor: pointer;
+}
+
+.pagination button:hover{
+    background-color: #555;
+}
+.pagination button:disabled {
+    background-color: #ddd;
+    color: #666;
+    cursor: not-allowed;
+}
+
+.pagination button.active {
+    background-color: #12354d;
+}
+
+.loader {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite; /* Add this line for rotation */
+    display: none; /* Initially hide the loader */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
