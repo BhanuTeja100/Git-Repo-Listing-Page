@@ -1,9 +1,10 @@
 // Github class definition
 class Github {
     constructor() {
+        
         this.url = "https://api.github.com/users/";
         this.repoUrl = "https://api.github.com/repos/";
-        this.accessToken = "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"
+        this.accessToken = config.MY_PAT;
     }
 
     async getGithubData(username, perPage = 10, page = 1) {
