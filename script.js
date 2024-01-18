@@ -156,50 +156,6 @@ const displayRepositories = (repositories) => {
 };
 
 
-
-
-// const updatePaginationControls = (currentPage, totalPages) => {
-//     const pageIndicator = document.getElementById('page-indicator');
-//     const paginationContainer = document.getElementById('pagination');
-//     const newerButton = document.createElement('button');
-//     const olderButton = document.createElement('button');
-
-//     newerButton.addEventListener('click', () => navigateToPage(currentPage + 1));
-//     olderButton.addEventListener('click', () => navigateToPage(currentPage - 1));
-//     // Clear existing pagination controls
-//     paginationContainer.innerHTML = '';
-
-//     // Display "Newer" button if not on the first page
-//     if (currentPage > 1) {
-//         newerButton.textContent = 'Older';
-//         newerButton.addEventListener('click', () => navigateToPage(currentPage - 1));
-//         paginationContainer.appendChild(newerButton);
-//     }
-
-//     // Display pagination controls
-//     for (let i = 1; i <= totalPages; i++) {
-//         const pageButton = document.createElement('button');
-//         pageButton.textContent = i;
-//         pageButton.addEventListener('click', () => navigateToPage(i));
-//         paginationContainer.appendChild(pageButton);
-//     }
-
-//     // Display "Older" button if not on the last page
-//     if (currentPage < totalPages) {
-//         olderButton.textContent = 'Newer';
-//         olderButton.addEventListener('click', () => navigateToPage(currentPage + 1));
-//         paginationContainer.appendChild(olderButton);
-//     }
-
-//     // Update page indicator
-//     pageIndicator.textContent = `Page ${currentPage} of ${totalPages}`;
-
-// };
-
-
-
-// Function to fetch repositories based on page number
-
 // Function to update pagination controls
 const updatePaginationControls = (currentPage, totalPages) => {
     const pageIndicator = document.getElementById('page-indicator');
@@ -274,8 +230,7 @@ async function fetchRepositoriesPage(username, page) {
     const totalRepositories = user.public_repos; // Assuming user.public_repos gives the total number of public repositories
     const totalPages = Math.ceil(totalRepositories / perPage);
 
-        // // Calculate total pages based on the total number of repositories and perPage
-        // const totalPages = Math.ceil(userPagination.public_repos / perPage);
+        
 
         // Display repositories in the UI
         displayRepositories(repositories);
@@ -351,11 +306,6 @@ const navigateToPage = async (page) => {
 };
 
 
-
-
-
-
-
 async function fetchAndDisplayRepositories() {
     const usernameInput = document.getElementById('username');
     const username = usernameInput.value.trim(); // Trim to remove any leading/trailing spaces
@@ -378,21 +328,6 @@ async function fetchAndDisplayRepositories() {
 }
 
 
-// const navigateToPage = async (page) => {
-//     const usernameInput = document.getElementById('username');
-//     const username = usernameInput.value.trim(); // Trim to remove any leading/trailing spaces
-
-//     try {
-//         if (username === '') {
-//             throw new Error('Please enter a GitHub username');
-//         }
-
-//         // Fetch and display repositories for the specified page
-//         await fetchAndDisplayRepositories(username, page);
-//     } catch (error) {
-//         console.error(error.message);
-//     }
-// };
 
 
 // Function to show loader
@@ -444,6 +379,16 @@ const updateUserDetails = (user) => {
 
 
 
+// Function to handle key press event
+const handleKeyPress = (event) => {
+    if (event.key === 'Enter') {
+        event.preventDefault();
+        document.getElementById('get-repositories-button').click();
+    }
+};
+
+// Add event listener to input field
+document.getElementById('username').addEventListener('keypress', handleKeyPress);
 
 
 document.getElementById('get-repositories-button').addEventListener('click', () => {

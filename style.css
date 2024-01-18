@@ -1,12 +1,14 @@
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #ffffff;
+*{
     margin: 0;
     padding: 0;
 }
 
-
-
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
 
 
 #logo{
@@ -23,7 +25,7 @@ body {
 }
 #user-avatar {
     border-radius: 50%;
-    max-width: 100px;
+    max-width: 150px;
 }
 
 #user-details {
@@ -60,7 +62,6 @@ body {
 #get-repositories-button:hover {
     background-color: #2577ae;
 }
-
 
 .container {
     max-width: 1200px;
