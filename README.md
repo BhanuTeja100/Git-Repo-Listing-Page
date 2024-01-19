@@ -24,8 +24,8 @@ Task : To create a website that displays the public Github repositories belongin
 - Now it will work with your personal access token
 - If this is not done it may give 401 (unauthorized) error or may not give any result
 
-<h3>Run index.js file</h3>
-<pre>start index.js</pre>
+<h3>Run index.html file</h3>
+<pre>start index.html</pre>
 
 <h2> Working of the Website</h2>
 
